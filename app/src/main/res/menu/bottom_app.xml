@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/round_home"
+        android:title=""/>
+
+    <item
+        android:id="@+id/statistic"
+        android:enabled="true"
+        android:icon="@drawable/statistic"
+        android:title=""/>
+
+    <item
+        android:id="@+id/bell"
+        android:enabled="true"
+        android:icon="@drawable/bell_round"
+        android:title=""/>
+
+    <item
+        android:id="@+id/user"
+        android:enabled="true"
+        android:icon="@drawable/user_round"
+        android:title=""/>
+</menu>

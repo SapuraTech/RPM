@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Hello"
+            android:textColor="@color/text_color"
+            android:textSize="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Amirul,"
+            android:textColor="@color/text_color"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textHello"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textGoodmorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Good Morning."
+            android:textColor="@color/text_color"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textHello" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+        <HorizontalScrollView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="W"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="10"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="T"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="11"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay2"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="F"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="12"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay3"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/selected_cal_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="S"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="13"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay4"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="S"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="14"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay5"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="M"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="15"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay6"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="T"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="16"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay7"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="W"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="17"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay8"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardBackgroundColor="@color/calender_bg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textDay9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="T"
+                            android:layout_marginTop="5dp"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textDate9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:text="18"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textDay9"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </HorizontalScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar_layout">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_layout">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/calender_bg"
+                    app:cardCornerRadius="30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/firstCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/textKM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="KM"
+                            android:textSize="15dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgKM"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginBottom="3dp"
+                            android:src="@drawable/km_icon"
+                            app:layout_constraintBottom_toBottomOf="@id/textKM"
+                            app:layout_constraintStart_toEndOf="@+id/textKM" />
+
+                        <TextView
+                            android:id="@+id/textTotalKM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="0.00"
+                            android:textColor="@color/selected_cal_bg"
+                            android:textSize="30dp"
+                            app:layout_constraintStart_toStartOf="@+id/textKM"
+                            app:layout_constraintTop_toBottomOf="@id/textKM" />
+
+                        <TextView
+                            android:id="@+id/textBPM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="BPM"
+                            android:textSize="15dp"
+                            app:layout_constraintStart_toStartOf="@+id/textTotalKM"
+                            app:layout_constraintTop_toBottomOf="@+id/textTotalKM" />
+
+                        <ImageView
+                            android:id="@+id/imgBPM"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginBottom="3dp"
+                            android:src="@drawable/bpm_icon"
+                            app:layout_constraintBottom_toBottomOf="@id/textBPM"
+                            app:layout_constraintStart_toEndOf="@+id/textBPM" />
+
+                        <TextView
+                            android:id="@+id/textTotalBPM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="0"
+                            android:textColor="@color/selected_cal_bg"
+                            android:textSize="30dp"
+                            app:layout_constraintStart_toStartOf="@+id/textBPM"
+                            app:layout_constraintTop_toBottomOf="@id/textBPM" />
+
+                        <TextView
+                            android:id="@+id/textActive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Active Min"
+                            android:textSize="15dp"
+                            app:layout_constraintStart_toStartOf="@+id/textTotalBPM"
+                            app:layout_constraintTop_toBottomOf="@+id/textTotalBPM" />
+
+                        <ImageView
+                            android:id="@+id/imgActive"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginBottom="3dp"
+                            android:src="@drawable/round_timer"
+                            app:layout_constraintBottom_toBottomOf="@id/textActive"
+                            app:layout_constraintStart_toEndOf="@+id/textActive" />
+
+                        <TextView
+                            android:id="@+id/textTotalActive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="02.54"
+                            android:textColor="@color/selected_cal_bg"
+                            android:textSize="30dp"
+                            app:layout_constraintStart_toStartOf="@+id/textActive"
+                            app:layout_constraintTop_toBottomOf="@id/textActive" />
+
+
+                        <TextView
+                            android:id="@+id/textExercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Exercise min"
+                            android:textSize="15dp"
+                            app:layout_constraintStart_toStartOf="@+id/textTotalActive"
+                            app:layout_constraintTop_toBottomOf="@+id/textTotalActive" />
+
+                        <ImageView
+                            android:id="@+id/imgExercise"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginBottom="3dp"
+                            android:src="@drawable/exercise_icon"
+                            app:layout_constraintBottom_toBottomOf="@id/textExercise"
+                            app:layout_constraintStart_toEndOf="@+id/textExercise" />
+
+                        <TextView
+                            android:id="@+id/textTotalExercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="00.00"
+                            android:textColor="@color/selected_cal_bg"
+                            android:textSize="30dp"
+                            app:layout_constraintStart_toStartOf="@+id/textExercise"
+                            app:layout_constraintTop_toBottomOf="@id/textExercise" />
+
+
+                        <ProgressBar
+                            android:id="@+id/progressStep"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:indeterminateOnly="false"
+                            android:max="100"
+                            android:progress="75"
+                            android:progressDrawable="@drawable/gradient_progress"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgExercise"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/numStep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@id/progressStep"
+                            app:layout_constraintEnd_toEndOf="@id/progressStep"
+                            app:layout_constraintStart_toStartOf="@id/progressStep"
+                            app:layout_constraintTop_toTopOf="@id/progressStep"
+                            android:text="6,000"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="bold"
+                            android:textSize="30dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@id/numStep"
+                            app:layout_constraintEnd_toEndOf="@id/numStep"
+                            app:layout_constraintStart_toStartOf="@id/numStep"
+                            app:layout_constraintTop_toBottomOf="@id/numStep"
+                            android:text="Steps"
+                            android:textSize="12dp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/calender_bg"
+                    app:cardCornerRadius="30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/secondCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/textKCAL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="kcal"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgKCAL"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="25dp"
+                            android:src="@drawable/kcal_icon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textKCAL" />
+                        <ProgressBar
+                            android:id="@+id/progressKcal"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="100dp"
+                            android:indeterminateOnly="false"
+                            android:max="100"
+                            android:progress="65"
+                            android:progressDrawable="@drawable/kcal_circularbar"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/numKcal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@id/progressKcal"
+                            app:layout_constraintEnd_toEndOf="@id/progressKcal"
+                            app:layout_constraintStart_toStartOf="@id/progressKcal"
+                            app:layout_constraintTop_toTopOf="@id/progressKcal"
+                            android:text="134"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="bold"
+                            android:textSize="20dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@id/numKcal"
+                            app:layout_constraintEnd_toEndOf="@id/numKcal"
+                            app:layout_constraintStart_toStartOf="@id/numKcal"
+                            app:layout_constraintTop_toBottomOf="@id/numKcal"
+                            android:text="Kcal burn"
+                            android:textSize="7dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/calender_bg"
+                    app:cardCornerRadius="30dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/thirdCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/textHeartRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Heart Rate"
+                            android:textSize="18dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgHeartRate"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="25dp"
+                            android:src="@drawable/heartrate_icon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textHeartRate" />
+
+                        <TextView
+                            android:id="@+id/numBMP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="25dp"
+                            android:text="70"
+                            android:textSize="40dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/selected_cal_bg"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="BMP"
+                            android:textSize="40dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/selected_cal_bg"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/numBMP"
+                            app:layout_constraintTop_toTopOf="parent" />                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#f0f3f9</color>
+    <color name="bottomapp">#753d84</color>
+    <color name="iconcolor">#808080</color>
+    <color name="iconcolor_selected">#C0C0C0</color>
+    <color name="text_color">#750fad</color>
+    <color name="calender_bg">#CFCFCF</color>
+    <color name="selected_cal_bg">#750fad</color>
+    <color name="total_calories_color">#FFFFFFFF</color>
+</resources>
